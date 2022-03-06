@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SingletonFactoryOfCloneHuman
 {
-    public class CloneSingletonFactory //Singletone фабрика
+    public class CloneSingletonFactory //Singletone (одиночка) фабрика
     {
         private static CloneSingletonFactory _singleton;
 
