@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace SingletonFactoryOfCloneHuman
 {
-    public interface IHuman : ICloneable
+    public interface IHuman 
     {
         string Name { get; set; }
         int Age { get; set; }
+        object Clone();
     }
 }
