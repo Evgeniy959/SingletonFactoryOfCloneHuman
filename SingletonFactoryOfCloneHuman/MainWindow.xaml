@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBlock x:Name="Tb1" HorizontalAlignment="Left" Margin="48,128,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.743,13.724"/>
+        <TextBlock x:Name="Tb2" HorizontalAlignment="Left" Margin="180,128,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Tb3" HorizontalAlignment="Left" Margin="48,240,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.743,13.724"/>
+        <TextBlock x:Name="Tb4" HorizontalAlignment="Left" Margin="180,240,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Оригинал" HorizontalAlignment="Left" Margin="120,78,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Button Content="Клон" HorizontalAlignment="Left" Margin="129,205,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
+
 
     </Grid>
 </Window>
