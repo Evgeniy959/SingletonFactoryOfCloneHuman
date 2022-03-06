@@ -20,9 +20,30 @@ namespace SingletonFactoryOfCloneHuman
     /// </summary>
     public partial class MainWindow : Window
     {
+        CloneHumanFactory cloneFactory;
+        IHuman man;
+        IHuman clone;
         public MainWindow()
         {
             InitializeComponent();
+            cloneFactory = CloneHumanFactory.GetSingletone();
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            man = new Person("Bob", 45);
+            Tb1.Text = man.Name;
+            Tb2.Text = man.Age.ToString();
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            clone = cloneFactory.HumanCloneFactory(man);
+            if (clone != default)
+            {
+                Tb3.Text = clone.Name;
+                Tb4.Text = clone.Age.ToString();
+            }
         }
     }
 }
