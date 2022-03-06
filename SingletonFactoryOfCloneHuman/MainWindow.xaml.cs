@@ -26,6 +26,8 @@ namespace SingletonFactoryOfCloneHuman
         public MainWindow()
         {
             InitializeComponent();
+            cloneFactory = CloneSingletonFactory.GetSingletone();
+
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -37,12 +39,23 @@ namespace SingletonFactoryOfCloneHuman
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            cloneFactory = CloneSingletonFactory.GetSingletone();
             clone = cloneFactory.CloneHumanFactory(human);
+            /*Tb3.Text = clone.Name;
+            Tb4.Text = clone.Age.ToString();*/
             if (clone != default)
             {
                 Tb3.Text = clone.Name;
                 Tb4.Text = clone.Age.ToString();
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            clone = cloneFactory.CloneHumanFactory(human);
+            if (clone != default)
+            {
+                Tb5.Text = clone.Name = "Gone";
+                Tb6.Text = clone.Age.ToString();
             }
         }
     }
