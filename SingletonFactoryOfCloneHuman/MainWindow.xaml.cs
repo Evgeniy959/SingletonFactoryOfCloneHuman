@@ -27,16 +27,13 @@ namespace SingletonFactoryOfCloneHuman
         {
             InitializeComponent();
             cloneFactory = CloneSingletonFactory.GetSingletone();
-
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             human = new Person("Tom", 32);
             Tb1.Text = human.Name;
             Tb2.Text = human.Age.ToString();
-
         }
-
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             clone = cloneFactory.CloneHumanFactory(human);
@@ -48,7 +45,6 @@ namespace SingletonFactoryOfCloneHuman
                 Tb4.Text = clone.Age.ToString();
             }
         }
-
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             clone = cloneFactory.CloneHumanFactory(human);
